@@ -19,7 +19,7 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    output =prediction[0][0]
+    output =int(prediction[0][0])
 
     return render_template('index.html', prediction_text='Your Height should be {} CM'.format(output))
 
